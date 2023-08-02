@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:wght@300&display=swap');
+
+*,
+*::before,
+*::after { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3eae3 ;
+    font-family: 'EB Garamond', serif;
+}
+
+.productdiv {
+   
+   
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+ 
+   
+     
+    
+  
+     
+  
+    
+
+}
+
+.detailside  {
+    
+    padding: 50px;
+    background-color: #fff;
+    height: 750px;
+    border-radius: 0px 25px 25px 0px;
+}
+
+.imageside {
+ 
+    height: 700px;
+    width: 100%;
+    background-image: url("image-product-desktop.jpg");
+    object-fit: cover;
+    background-repeat: no-repeat;
+    padding: 60px 130px;
+    height: 750px;
+    border-radius: 25px 0px 0px 25px;
+    
+}
+
+
+
+
+
+h1 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    color: rgb(78, 77, 77);
+    margin-bottom: 50px;
+}
+
+
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 3.5rem;
+    color: #000;
+    margin-bottom: 50px;
+    line-height: 1;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3ch;
+    line-height: 1.5;
+    letter-spacing: 2;
+}
+
+
+.PRICE {
+    display: flex;
+    gap: 20px;
+}
+
+
+.Main-Price {
+    font-size: 3rem;
+    color: #3d8168;
+    margin-top: 50px;
+}
+
+.Dis-Price {
+    font-size: 1.5rem;
+    color: grey;
+    text-decoration: line-through;
+    align-self: center;
+    padding-top: 50px;
+}
+
+button {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    background-color: #3d8168;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 50px;
+    width: 100%;
+     
+
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+}
