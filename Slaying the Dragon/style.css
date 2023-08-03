@@ -3,15 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
+
 body {
-  height: 100%;
-  width: 100%;
   font-family: sans-serif;
+  padding: 0 5rem;
+
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+/* utility classes */
+
+.btn-make {
+  background-color: #000;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  box-shadow: none;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: -5px;
+  margin-left: 10px;
 }
 
 /* Header Section */
@@ -19,99 +35,129 @@ a {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .logo {
   font-family: sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .nav-items {
   font-family: sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-right: 10px;
   color: #000;
 }
 
-button {
-  background-color: #000;
-  color: white;
-  font-family: sans-serif;
-  font-size: 1rem;
-  box-shadow: none;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  margin-top: -5px;
-  margin-left: 10px;
+.burger-menu {
+  display: none;
 }
 
-@media (max-width: 934px) {
+/* Media Quaries for Header Section */
+
+@media (max-width: 1048px) {
   header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
   }
-
-  .logo {
-    font-size: 1.2rem;
-  }
-
-  .burgermenu {
+  .burger-menu {
     width: 30px;
     height: 30px;
+    display: inline;
   }
 
-  .buttons,
-  .navbar {
+  .nav-items {
     display: none;
   }
 
-  .burgermenu {
-    display: block;
+  .nav-btns {
+    display: none;
+  }
+}
+
+@media (max-width: 422px) {
+  body {
+    padding: 0 1rem;
   }
 }
 
 /* Hero Section */
 
 .hero {
-  width: 35%;
+  width: 40%;
   margin: 0 auto;
-  padding: 130px 0px;
+  padding: 130px 6rem;
   text-align: center;
 }
 
 .hero_title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: sans-serif;
   padding-bottom: 30px;
   line-height: 1;
 }
 
 .hero_des {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: sans-serif;
+  line-height: 1.5;
 }
 
 .hero_btn {
   margin: 40px;
+  padding: 10px 20px;
+}
+
+/* Media Quaries for Hero Section */
+
+@media (max-width: 1720px) {
+  .hero {
+    width: 50%;
+  }
+
+  .hero_title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  .hero {
+    width: 70%;
+  }
+}
+
+@media (max-width: 932px) {
+  .hero {
+    width: 90%;
+  }
+
+  .hero_title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 672px) {
+  .hero {
+    width: 100%;
+    padding: 5rem 1rem;
+  }
+
+  .hero_title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero_des {
+    font-size: 1rem;
+  }
 }
 
 /* Price Section */
 
 .price_section {
-  padding: 100px;
-}
-
-.price_section_top_des {
-  width: 25%;
-  font-size: 1.1rem;
-  font-family: sans-serif;
-  letter-spacing: 3;
-  line-height: 1.5;
+  padding: 100px 0px;
 }
 
 .price_section_top_heading {
@@ -121,9 +167,17 @@ button {
   padding-bottom: 10px;
 }
 
+.price_section_top_des {
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  letter-spacing: 3;
+  line-height: 1.5;
+}
+
 .price_plans {
   margin: 50px 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
 }
@@ -163,20 +217,75 @@ li {
   color: #000;
 }
 
+/* Media FOR PRICE SECTION */
+
+@media (max-width: 1354px) {
+  .plan_1,
+  .plan_2,
+  .plan_3 {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 541px) {
+  body {
+    padding: 0 2.1rem;
+  }
+  .price_section_top_heading {
+    font-size: 1.5rem;
+  }
+
+  .price_plans {
+  }
+}
+
+@media (max-width: 469px) {
+  body {
+    padding: 0 1.5rem;
+  }
+  .price_section_top_heading {
+    font-size: 1rem;
+  }
+
+  .price_section_top_des {
+    font-size: 1rem;
+  }
+
+  .plan_1,
+  .plan_2,
+  .plan_3 {
+    min-width: 200px;
+  }
+
+  @media (max-width: 422px) {
+    .plan_1,
+    .plan_2,
+    .plan_3 {
+      padding: 2rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+  }
+}
+
 /* Features Section */
 
 .features {
-  padding: 50px 100px;
+  padding: 50px 0px;
   text-align: center;
 }
 
 .feature-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
 }
 
 .feature-desc {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  line-height: 1.5;
 }
 
 .features-boxes {
@@ -184,8 +293,8 @@ li {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
   padding-top: 50px;
+  gap: 30px;
 }
 
 .box-1,
@@ -205,12 +314,32 @@ li {
 .box-title {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
 }
 
 .box-des {
   font-size: 1.1rem;
   line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+  .feature-title {
+    font-size: 1.6rem;
+  }
+
+  .feature-desc {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 698px) {
+    .feature-title {
+      font-size: 1.3rem;
+    }
+
+    .feature-desc {
+      font-size: 1rem;
+    }
+  }
 }
 
 /* Contact Section */
@@ -221,26 +350,40 @@ li {
 }
 
 .contact-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
 }
 
 .contact-des {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   letter-spacing: 5;
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
   line-height: 1.6;
 }
 
 .contact-button {
-  margin-top: 10px;
-}
-
-.contact-button {
+  margin-top: 1rem;
   font-size: 1.3rem;
   padding: 10px 20px;
+}
+
+@media (max-width: 1382px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-des {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .contact-button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
 
 /* Footer */
